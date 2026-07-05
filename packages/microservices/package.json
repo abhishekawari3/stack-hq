@@ -1,0 +1,29 @@
+{
+  "name": "@stack-hq/microservices",
+  "version": "1.0.0",
+  "description": "Base service class, service discovery, inter-service communication, and a Docker Compose starter template.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist", "docker-compose.template.yml"],
+  "keywords": ["stack-hq", "microservices", "backend"],
+  "author": "Abhishek Awari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekawari3/stack-hq.git",
+    "directory": "packages/microservices"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": { "node": ">=16" },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5"
+  }
+}

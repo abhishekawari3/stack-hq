@@ -1,0 +1,29 @@
+{
+  "name": "@stack-hq/observability",
+  "version": "1.0.0",
+  "description": "Health check registry and a Prometheus-style metrics registry.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "keywords": ["stack-hq", "observability", "backend"],
+  "author": "Abhishek Awari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekawari3/stack-hq.git",
+    "directory": "packages/observability"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": { "node": ">=16" },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5"
+  }
+}

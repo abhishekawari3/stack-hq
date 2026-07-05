@@ -1,0 +1,33 @@
+{
+  "name": "@stack-hq/messaging",
+  "version": "1.0.0",
+  "description": "In-memory message queue (retries, dead-letter queue, delayed delivery) and topic-based pub/sub.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "keywords": ["stack-hq", "messaging", "backend"],
+  "author": "Abhishek Awari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekawari3/stack-hq.git",
+    "directory": "packages/messaging"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": { "node": ">=16" },
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.8",
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5"
+  }
+}

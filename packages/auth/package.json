@@ -1,0 +1,35 @@
+{
+  "name": "@stack-hq/auth",
+  "version": "1.0.0",
+  "description": "JWT, OAuth 2.0 (Google/GitHub/Facebook), sessions, token refresh & rotation, and token blacklisting — @stack-hq auth toolkit.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "keywords": ["stack-hq", "auth", "backend"],
+  "author": "Abhishek Awari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekawari3/stack-hq.git",
+    "directory": "packages/auth"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": { "node": ">=16" },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/uuid": "^9.0.8",
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5"
+  }
+}

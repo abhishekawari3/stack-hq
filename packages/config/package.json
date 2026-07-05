@@ -1,0 +1,27 @@
+{
+  "name": "@stack-hq/config",
+  "version": "1.0.0",
+  "description": "Environment-based config loader with schema validation, type coercion, defaults, and .env parsing.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "keywords": ["stack-hq", "config", "env", "dotenv", "backend"],
+  "author": "Abhishek Awari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekawari3/stack-hq.git",
+    "directory": "packages/config"
+  },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=16" },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5"
+  }
+}

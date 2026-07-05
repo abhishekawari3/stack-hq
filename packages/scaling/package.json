@@ -1,0 +1,29 @@
+{
+  "name": "@stack-hq/scaling",
+  "version": "1.0.0",
+  "description": "Load balancing (round-robin, weighted round-robin, least-connections, random) and consistent hashing.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "keywords": ["stack-hq", "scaling", "backend"],
+  "author": "Abhishek Awari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekawari3/stack-hq.git",
+    "directory": "packages/scaling"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": { "node": ">=16" },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5"
+  }
+}

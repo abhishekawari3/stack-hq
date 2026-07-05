@@ -1,0 +1,18 @@
+{
+  "name": "@stack-hq/monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "stack-hq — a suite of scoped backend packages (@stack-hq/auth, @stack-hq/cache, @stack-hq/logger, ...)",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "publish-all": "npm publish --workspaces --access public"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.11.30"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@stack-hq/redis",
+  "version": "1.0.0",
+  "description": "Redis-backed distributed cache, session store, rate limiter, and locking — bring your own client (ioredis or node-redis compatible).",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "keywords": ["stack-hq", "redis", "cache", "distributed-lock", "rate-limiter", "backend"],
+  "author": "Abhishek Awari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekawari3/stack-hq.git",
+    "directory": "packages/redis"
+  },
+  "publishConfig": { "access": "public" },
+  "peerDependencies": {
+    "ioredis": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ioredis": { "optional": true }
+  },
+  "engines": { "node": ">=16" },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5"
+  }
+}

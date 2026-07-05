@@ -1,0 +1,33 @@
+{
+  "name": "@stack-hq/prisma",
+  "version": "1.0.0",
+  "description": "Prisma helpers: base repository pattern, transaction wrapper, offset/cursor pagination, and soft-delete utilities.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "keywords": ["stack-hq", "prisma", "orm", "repository", "pagination", "backend"],
+  "author": "Abhishek Awari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekawari3/stack-hq.git",
+    "directory": "packages/prisma"
+  },
+  "publishConfig": { "access": "public" },
+  "peerDependencies": {
+    "@prisma/client": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@prisma/client": { "optional": true }
+  },
+  "engines": { "node": ">=16" },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5"
+  }
+}
